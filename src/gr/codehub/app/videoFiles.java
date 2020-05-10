@@ -4,18 +4,15 @@ public class videoFiles extends media {
 
     private float duration;
     private String resolution;
-    private String filetype;
 
-
-    public videoFiles(String filename, String description, String size, String type) {
+    public videoFiles(String filename, String description, float size, String type) {
         super(filename, description, size, type);
     }
 
-    public videoFiles(String filename, String description, String size, String type, float duration, String resolution, String filetype) {
+    public videoFiles(String filename, String description, float size, String type, float duration, String resolution, String filetype) {
         super(filename, description, size, type);
         this.duration = duration;
         this.resolution = resolution;
-        this.filetype = filetype;
     }
 
     public float getDuration() {
@@ -34,12 +31,8 @@ public class videoFiles extends media {
         this.resolution = resolution;
     }
 
-    public String getFiletype() {
-        return filetype;
-    }
-
-    public void setFiletype(String filetype) {
-        this.filetype = filetype;
+    public String getMediaType(){
+        return "video";
     }
 
     @Override

@@ -4,17 +4,19 @@ public class imgFiles extends media {
 
     private String creator;
     private String quality;
-    private String filetype;
 
-    public imgFiles(String filename, String description, String size, String type) {
+    public imgFiles(String filename, String description, float size, String type) {
         super(filename, description, size, type);
     }
 
-    public imgFiles(String filename, String description, String size, String type, String creator, String quality, String filetype) {
+    public imgFiles(String filename, String description, float size, String type, String creator, String quality, String filetype) {
         super(filename, description, size, type);
         this.creator = creator;
         this.quality = quality;
-        this.filetype = filetype;
+    }
+
+    public String getMediaType(){
+        return "image";
     }
 
     public String getCreator() {
@@ -31,14 +33,6 @@ public class imgFiles extends media {
 
     public void setQuality(String quality) {
         this.quality = quality;
-    }
-
-    public String getFiletype() {
-        return filetype;
-    }
-
-    public void setFiletype(String filetype) {
-        this.filetype = filetype;
     }
 
     @Override

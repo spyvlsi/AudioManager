@@ -3,8 +3,7 @@ package gr.codehub.app;
 public class audioFiles extends media {
 
     private float duration;
-    private String Artist;
-    private String filetype;
+    private String artist;
 
     public float getDuration() {
         return duration;
@@ -15,41 +14,33 @@ public class audioFiles extends media {
     }
 
     public String getArtist() {
-        return Artist;
+        return artist;
     }
 
     public void setArtist(String artist) {
-        Artist = artist;
+        this.artist = artist;
     }
 
-    public String getFiletype() {
-        return filetype;
+    public String getMediaType(){
+        return "audio";
     }
 
-    public void setFiletype(String filetype) {
-        this.filetype = filetype;
-    }
 
-    public audioFiles(String filename, float duration, String description, String size, String type) {
+    public audioFiles(String filename, float duration, String description, float size, String type) {
         super(filename, description, size, type);
     }
 
-    public audioFiles(String filename, String description, String size, String type, float duration, String artist, String filetype) {
+    public audioFiles(String filename, String description, float size, String type, float duration, String artist, String filetype) {
         super(filename, description, size, type);
         this.duration = duration;
-        Artist = artist;
-        this.filetype = filetype;
-    }
-
-    public void addAudioFiles(){
-
+        this.artist = artist;
     }
 
     @Override
     public String toString() {
         return "audioFiles{" +
                 "duration=" + duration +
-                ", Artist='" + Artist + '\'' +
+                ", artist='" + artist + '\'' +
                 '}';
     }
 }

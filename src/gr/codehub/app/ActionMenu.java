@@ -9,5 +9,9 @@ public enum ActionMenu {
     SAVE,
     LOAD,
     EXIT,
+    SORT_BY_NAME,
+    SORT_BY_TYPE,
+    SEARCH_BY_NAME,
+    TOTALSIZE,
     ERROR,
 }
